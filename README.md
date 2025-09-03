@@ -4,7 +4,7 @@ Online Café Ordering Website (fun if it’s a chai theme 😄)
 An interactive web-based restaurant ordering system that allows users to browse the menu,
 add items to the cart, proceed with dummy payment, and track order preparation with a countdown timer.
 
-🚀 Features
+#🚀 Features
 
 🏠 Home Page – Attractive landing page introducing the restaurant
 
