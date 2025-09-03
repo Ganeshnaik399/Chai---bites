@@ -1,6 +1,6 @@
 # Chai&bites
-Online Café Ordering Website (fun if it’s a chai theme 😄)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+online cafe Ordering Website (Fun it it's a Chai theme😄)
+
 An interactive web-based restaurant ordering system that allows users to browse the menu,
 add items to the cart, proceed with dummy payment, and track order preparation with a countdown timer.
 
