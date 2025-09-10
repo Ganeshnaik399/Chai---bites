@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact Us</title>
+      <link rel="shortcut icon" href="icon.jpg" type="image/x-icon/png">
+    <link rel="stylesheet" href="styles.css">
+     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body style="background-color: black;color: white;">
+    <header>
+        <nav>
+            <div class="logo" >☕ Hyderabadi. Chai</div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="testmonial.html">TESTMONIALS</a></li>
+                <li style="background-color: rgb(223, 229, 212);border: 2px dotted;border-radius: 2px; "><a href="#contact.html" style="color: red;" >CONTACT US</a></li>
+            </ul>
+            <button class="login-btn" onclick="openLogin()"><i class='bx bx-user'>_</i> Login</button>
+        </nav>
+    </header>
+        <marquee behavior="scroll" direction="left"><h2 style="color: azure;font-family: Georgia, 'Times New Roman', Times, serif;">welcome you Hyderabadi. ♨️...."Chai takkunu thagara bhai"...🫖.teste the ♨...😋</h2></marquee>
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login / Signup</h2>
+            <input type="tel" placeholder="Enter Phone Number">
+            <input type="password" placeholder="Enter Password">
+            <button class="btn">Login</button>
+            <p>New user? <a href="#">Sign up here</a></p>
+        </div>
+   </div>
+      <section class="contact-section">
+    <div class="contact-container">
+        
+        <!-- Left Side Illustration -->
+        <div class="contact-illustration">
+            <img src="https://cdn-icons-png.flaticon.com/512/1047/1047711.png" alt="Chai Cup">
+            <h2>☕ Hyderabadi Chai</h2>
+            <p>"Chai takkunu thagara bhai... taste the magic!"</p>
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="contact-form-container">
+            <h1 class="contact-title">💬 Get in Touch</h1>
+            <p class="contact-subtitle">We’d love to hear from you! Send us your feedback or queries below.</p>
+            
+            <form action="index.html" class="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Mobile No." required>
+                    <input type="email" placeholder="Email ID">
+                </div>
+                <textarea name="comment" id="suggestion" rows="5" placeholder="Enter your feedback..."></textarea>
+                <button type="submit" class="btn-submit">🚀 Submit</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>📍 Address</h3>
+            <p>Hyderabadi Chai,<br> Banjara Hills, Hyderabad,<br> Telangana, India</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>☎ Contact</h3>
+            <p>Phone: +91 8374585828</p>
+            <p>Email: support@hyderabadichai.com</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>👥 Community</h3>
+            <p><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp Group</a></p>
+            <p><a href="#"><i class="fab fa-instagram"></i> Instagram</a></p>
+            <p><a href="#"><i class="fab fa-facebook"></i> Facebook Page</a></p>
+        </div>
+
+        <div class="footer-section">
+            <h3>📜 Policy</h3>
+            <p><a href="#">Privacy Policy</a></p>
+            <p><a href="#">Refund Policy</a></p>
+            <p><a href="#">Terms & Conditions</a></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+        <p>👁️ Visitors Count: 
+            <span class="live-dot"></span>
+            <span id="visitorCount" class="visitor-box">0</span>
+        </p>
+        <p>© 2025 Hyderabadi Chai. All Rights Reserved.</p>
+    </div>
+
+    <!-- Social Icons Row -->
+    <div class="social-icons">
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+</footer>
+<!-- Visitor Counter Script -->
+<script>
+    // Visitor Counter with localStorage + count-up animation
+    let count = localStorage.getItem("visitorCount") || 0;
+    count++;
+    localStorage.setItem("visitorCount", count);
+
+    let display = document.getElementById("visitorCount");
+    let start = 0;
+    let end = parseInt(count);
+    let duration = 800; // 0.8s animation
+    let step = Math.ceil(end / (duration / 30));
+
+    let counter = setInterval(() => {
+        start += step;
+        if (start >= end) {
+            start = end;
+            clearInterval(counter);
+        }
+        display.textContent = start;
+    }, 30);
+</script>
+ </div>
+        <div id="footer" class="footer">
+         <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="#order.html">ORDER</a></li>
+            <li><a href="testmonial.html">TESTMONIALS</a></li>
+            <li><a href="contact.html"  style="background-color: aliceblue;color: brown;padding: 10px;">CONTACT US</a></li>
+        </ul>
+    </div> 
+        <div id="ggg" class="footer">
+         <ul >
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-bars"></i></a></li>
+            <li><a href="order.html"><i class="fa-brands fa-shopify"></i></a></li>
+            <li><a href="testmonial.html"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="contact.html"  style="background-color: aliceblue;color: brown;padding: 10px;"><i class="fa-solid fa-comment"></i></a></li>
+        </ul>
+     <div> 
+</body>
+</html>

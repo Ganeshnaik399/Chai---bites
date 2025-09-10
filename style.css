@@ -1,0 +1,268 @@
+/* Footer Styling */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 30px 20px;
+    margin-top: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.footer-section h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.footer-section{
+border: 1px solid rgb(57, 54, 54);
+box-shadow: 2px 1px 12px rgb(100, 52, 52);
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-section a {
+    color: lightgreen;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.footer-section a i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.footer-section a:hover {
+    color: #ffcc00;
+}
+
+.footer hr {
+    border: 0;
+    height: 1px;
+    background: gray;
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Visitor Counter Box */
+.visitor-box {
+    background: #000;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 40px;
+    text-align: center;
+    box-shadow: 0 0 10px #0f0;
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.visitor-box:hover {
+    transform: scale(1.1);
+    background: #111;
+}
+
+/* Blinking Live Dot */
+.live-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #0f0;
+    border-radius: 50%;
+    margin-right: 6px;
+    animation: blink 1s infinite;
+    box-shadow: 0 0 8px #0f0;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+/* Social Media Icons */
+.social-icons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+/* 🌈 Modern Contact Section with Illustration */
+.contact-section {
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #ff6a00, #ee0979, #6a11cb, #2575fc);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+    color: white;
+    margin-top: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+    margin: auto;
+    gap: 40px;
+}
+
+/* Left Side Illustration */
+.contact-illustration {
+    flex: 1;
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+}
+
+.contact-illustration img {
+    width: 180px;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
+.contact-illustration h2 {
+    margin-top: 15px;
+    font-size: 24px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.contact-illustration p {
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Right Side Form */
+.contact-form-container {
+    flex: 1;
+    min-width: 320px;
+}
+
+.contact-title {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.contact-subtitle {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #f1f1f1;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.form-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.form-group input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.form-group input::placeholder,
+textarea::placeholder {
+    color: #ddd;
+}
+
+.form-group input:focus {
+    border-color: #ffcc00;
+    box-shadow: 0 0 12px #ffcc00;
+    background: rgba(255,255,255,0.2);
+}
+
+textarea {
+    width: 94%;
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 2px solid transparent;
+    color: white;
+    outline: none;
+    transition: 0.3s;
+    font-size: 15px;
+    margin-bottom: 15px;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #00ffcc;
+    box-shadow: 0 0 12px #00ffcc;
+    background: rgba(255,255,255,0.2);
+}
+
+/* 🚀 Gradient Button */
+.btn-submit {
+    background: linear-gradient(90deg, #ffcc00, #ff6a00, #ee0979, #6a11cb);
+    background-size: 400% 400%;
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    animation: gradientShift 6s ease infinite;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.btn-submit:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #ffcc00;
+}

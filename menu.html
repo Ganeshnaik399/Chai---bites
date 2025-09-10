@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu -Hyderabadi chai</title>
+    <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="icon.jpg" type="image/x-icon/png">
+ <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body id="body">
+    <header>
+        <nav>
+            <div class="logo" >☕ Hyderabadi. Chai</div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li style="background-color: rgb(223, 229, 212);border: 2px dotted;border-radius: 2px; "><a href="menu.html" style="color: red;" >MENU</a></li>
+                <li><a href="order.html">ORDER</a></li>
+                <li><a href="testmonial.html">TESTMONIALS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <button class="login-btn" onclick="openLogin()"><i class='bx bx-user'>_</i> Login</button>
+        </nav>
+    </header>
+    <marquee behavior="scroll" direction="left"><h2 style="color: azure;font-family: Georgia, 'Times New Roman', Times, serif;">welcome you Hyderabadi. ♨️...."Chai takkunu thagara bhai"...🫖.teste the ♨...😋</h2></marquee>
+    <section class="menu">
+        <h2 style="color: yellow;">Our Chai Collection:</h2>
+        <div class="chai-list">
+            <div class="chai-item">
+                <span>
+                <img src="image/masala.jpg" alt="masala chai" width="200px" height="200px">
+               </span>  
+                <h3> Masala Chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.5/5) -> <label for="" id="lab1">80</label>+ <button type="submit" id="submit1" class="iddd">❤️</button></a> likes</h5>
+                <h5>price ₹:50.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+               <!---<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>--->
+               <button class="btn" onclick="addToOrder('Masala Chai', 50,'image/masala.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/ginder.jpg" alt="Ginger chai" width="200px" height="200px">
+                <h3>Ginger Chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab2">86</label>+ <button type="submit" id="submit2" class="iddd">❤️</button></a>likes</h5>
+                 <h5>Price ₹ :20.00 <sub>only..</sub></h5>
+                 <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+               <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9)">Cart🛍️</button><br>-->
+               <button class="btn" onclick="addToOrder('Ginger chai', 20,'image/ginder.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/Elachi.jpg" alt="Elaichi chai" width="200px" height="200px">
+                <h3>Elaichi Chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab3">134</label>+ <button type="submit" id="submit3" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:70.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+               <!-- <button class="btn" onclick="openLogin()" style="background-color:rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                <button class="btn" onclick="addToOrder('Elachi Chai', 70,'image/Elachi.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/kashmir.jpg" alt="Kashmiri kawha" width="200px" height="200px">
+                <h3>Kashmiri kahwa</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab4">99</label>+ <button type="submit" id="submit4" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:180.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+               <!-- <button class="btn" onclick="openLogin()" style="background-color:rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                <button class="btn" onclick="addToOrder('Kashmir Chai', 50,'image/kashmir.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/irani.jpg" alt="Irani chai" width="200px" height="200px">
+                <h3>Irani chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab5">83</label>+ <button type="submit" id="submit5" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:40.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+                <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                <button class="btn" onclick="addToOrder('Irani Chai', 50,'image/irani.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/butter.jpg" alt="Butter chai" width="200px" height="200px">
+                <h3>Butter chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab6">124</label>+ <button type="submit" id="submit6" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:120.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+               <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                <button class="btn" onclick="addToOrder('Butter Chai', 50,'image/butter.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/thanduri.jpg" alt="thandori chai" width="200px" height="200px">
+                <h3>Thandori chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab7">232</label>+ <button type="submit" id="submit7" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:80.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+               <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                <button class="btn" onclick="addToOrder('Thanduri Chai', 50,'image/thandori.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/sulaimani.jpg" alt="sulaimani chai" width="200px" height="200px">
+                <h3>Sulaimani Chai</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab8">176</label>+ <button type="submit" id="submit8" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:300.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">add extra suger</option>
+                    <option value="2">add low suger</option>
+                    <option value="3">with out suger</option>
+                </select>
+                <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                             <button class="btn" onclick="addToOrder('Sulaimani Chai', 50,'image/sulaimani.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/osmaniya.jpg" alt="osmaniya-biscuits" width="200px" height="200px">
+                <h3>Osmaniya-biscuits</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab9">156</label>+ <button type="submit" id="submit9" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:15.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger">
+                    <option value="1">no.of 2 Biscuits</option>
+                    <option value="2">no.of 4</option>
+                    <option value="3">no.of 6</option>
+                </select>
+                <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                             <button class="btn" onclick="addToOrder('Osmaniya Biscuits', 50,'image/osmaniya.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+            <div class="chai-item">
+                <img src="image/bunrusk.jpg" alt="bunrusk" width="200px" height="200px" title="bummmm">
+                <h3>Bunrusk</h3>
+                <h5><button onclick="openLogin()" class="iddd">⭐</button>(4.2/5) -> <label for="" id="lab10">156</label>+ <button type="submit" id="submit10" class="iddd">❤️</button></a>likes</h5>
+                <h5>price ₹:30.00 <sub>only..</sub></h5>
+                <select name="suger" id="#suger" >
+                    <option value="1">no.of 2 bunrusk</option>
+                    <option value="2">no.of 4</option>
+                    <option value="3">no.of 6</option>
+                </select>
+                <!--<button class="btn" onclick="openLogin()" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>-->
+                <button class="btn" onclick="addToOrder('Bunrask Rusk', 50,'image/bunrusk.jpg')" style="background-color: rgb(215, 211, 9);">Cart🛍️</button><br>
+                <button class="buy" onclick="openLogin()">Buy Now</button>
+            </div>
+        </div>
+        <button type="submit" id="more"><a href="#more">VIEW MORE -></a></button>
+         <div id="loginPopup" class="popup ">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <div class="popup-content">
+         <div class="flip-container" id="flipCard">
+            <div class="flipper">
+              <div class="front">
+                 <form action="menu.html">
+                    <h2 style="background-color: rgb(102, 241, 241);box-shadow: 2px 6px 2px red; text-shadow: 2px 4px 4px rgb(18, 239, 25); width: 250px; font-weight: bold; font-size: 30px; border-radius: 10px;margin-left: 8px;">LOGIN HERE</h2>
+                    <input type="tel" placeholder="Enter Phone Number" required><br>
+                    <input type="password" placeholder="Enter Password" required><br>
+                     <p>don't Have an account...?<br>
+                      <a href="#" onclick="flipToRegister()">Register here..</a>
+                     </p>
+                 <button type="submit" class="btn logg">Login</button>
+                 <p>Or login with:</p>
+                        <div class="social-icons">
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-facebook'></i>
+                            <i class='bx bxl-twitter'></i>
+                        </div>
+               </form>
+            </div>
+              <!-- Register Form -->
+                <div class="back">
+                    <form action="menu.html">
+                     <span class="back-arrow" onclick="flipToLogin()">&#8592; Back</span>
+                      <h2 style="background-color: rgb(119, 201, 201);box-shadow: 2px 6px 2px red;text-shadow: 2px 2px 5px rgb(18, 239, 25); width: 250px; font-weight: bold; font-size: 30px; border-radius: 10px;margin-left: 10PX;margin-top: 0%;margin-bottom: 2px;margin-bottom: 15px;">REGISTER</h2>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="password" placeholder="Create Password" required>
+                        <button type="submit" class="btn logg">Signup</button>
+                        <p style="margin: 2px;">Or signup with:</p>
+                        <div class="social-icons">
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-facebook'></i>
+                            <i class='bx bxl-twitter'></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+    </section>
+    
+         </div>
+        <div id="footer" class="footer">
+         <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html"  style="background-color: aliceblue;color: brown;padding: 10px;">MENU</a></li>
+            <li><a href="#order" onclick="openLogin()">ORDER</a></li>
+            <li><a href="testmonial.html">TESTMONIALS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </div> 
+        <div id="ggg" class="footer">
+         <ul >
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="menu.html"  style="background-color: aliceblue;color: brown;padding: 10px;"><i class="fa-solid fa-bars"></i></a></li>
+            <li><a href="#order" onclick="openLogin()"><i class="fa-brands fa-shopify"></i></a></li>
+            <li><a href="testmonial.html"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-comment"></i></a></li>
+        </ul>
+     <div> 
+    <script src="script.js"></script>
+<script>
+function addToOrder(name, price, image) {
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.push({ name: name, price: price, image: image });
+    localStorage.setItem("orders", JSON.stringify(orders));
+    alert(name + " added to order list ✅");
+}
+</script>
+
+
+</body>
+</html>

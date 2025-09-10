@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganni Chai - Chai Thagu Guru</title>
+    <link rel="stylesheet" href="styles.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body style="background: linear-gradient(to top,rgba(15, 15, 15, 0.5)50%,rgba(41, 34, 34, 0.5)50%),url(image/irani.webp);background-size: cover;background-position:center; background-repeat:no-repeat; width: 100%;">
+    <header>
+    <nav>
+        <div class="logo" >☕ Hyderabadi. Chai</div>
+        <ul> 
+            <li style="background-color: rgb(223, 229, 212);border: 2px dotted;border-radius: 2px; "><a href="index.html" style="color: red;" >HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="#order" onclick="openLogin()">ORDER</a></li>
+            <li><a href="testmonial.html">TESTMONIALS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+        <button class="login-btn" onclick="openLogin()"><i class='bx bx-user'>_</i> Login</button>
+    </nav>
+</header>
+    <section class="hero">
+        <h1>Welcome to Hyderabadi...chai</h1>
+        <p>"Chai Thagu Guru.." - The Best 🫖 in Hyderabad</p>
+        <a href="menu.html" class="btn">View Menu</a>
+        <button class="btn" onclick="openLogin()">SignIn/Signup</button>
+       <marquee behavior="scroll" direction="middle"> <h4 style="color: yellow;font-style: italic;">Online chai experiance  available here...Hyderabad circle.."jet speed delivaryy"</h4></marquee>
+    </section>
+    <div id="loginPopup" class="popup ">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <div class="popup-content">
+         <div class="flip-container" id="flipCard">
+            <div class="flipper">
+              <div class="front">
+                 <form action="menu.html">
+                    <h2 style="background-color: rgb(102, 241, 241);box-shadow: 2px 6px 2px red; text-shadow: 2px 4px 4px rgb(18, 239, 25); width: 250px; font-weight: bold; font-size: 30px; border-radius: 10px;margin-left: 8px;">LOGIN HERE</h2>
+                    <input type="tel" placeholder="Enter Phone Number" required><br>
+                    <input type="password" placeholder="Enter Password" required><br>
+                     <p>don't Have an account...?<br>
+                      <a href="#" onclick="flipToRegister()">Register here..</a>
+                     </p>
+                 <button type="submit" class="btn logg">Login</button>
+                 <p>Or login with:</p>
+                        <div class="social-icons">
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-facebook'></i>
+                            <i class='bx bxl-twitter'></i>
+                        </div>
+               </form>
+            </div>
+              <!-- Register Form -->
+                <div class="back">
+                    <form action="menu.html">
+                     <span class="back-arrow" onclick="flipToLogin()">&#8592; Back</span>
+                      <h2 style="background-color: rgb(119, 201, 201);box-shadow: 2px 6px 2px red;text-shadow: 2px 2px 5px rgb(18, 239, 25); width: 250px; font-weight: bold; font-size: 30px; border-radius: 10px;margin-left: 10PX;margin-top: 0%;margin-bottom: 2px;margin-bottom: 15px;">REGISTER</h2>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="password" placeholder="Create Password" required>
+                        <button type="submit" class="btn logg">Signup</button>
+                        <p style="margin: 2px;">Or signup with:</p>
+                        <div class="social-icons">
+                            <i class='bx bxl-google'></i>
+                            <i class='bx bxl-facebook'></i>
+                            <i class='bx bxl-twitter'></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+        <div id="footer" class="footer">
+         <ul>
+            <li><a href="index.html" style="background-color: aliceblue;color: brown;padding: 10px;">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="#order" onclick="openLogin()">ORDER</a></li>
+            <li><a href="testmonial.html">TESTMONIALS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </div> 
+        <div id="ggg" class="footer">
+         <ul >
+            <li><a href="index.html"  style="background-color: aliceblue;color: brown;padding: 10px;"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-bars"></i></a></li>
+            <li><a href="#order" onclick="openLogin()"><i class="fa-brands fa-shopify"></i></a></li>
+            <li><a href="testmonial.html"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-comment"></i></a></li>
+        </ul>
+     <div> 
+    <script src="script.js"></script>
+</body>
+</html>

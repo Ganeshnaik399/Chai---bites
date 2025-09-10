@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabad-Chai</title>
+      <link rel="shortcut icon" href="icon.jpg" type="image/x-icon/png">
+    <link rel="stylesheet" href="styles.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" >☕ Hyderabadi. Chai</div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li  style="background-color: rgb(223, 229, 212);border: 2px dotted;border-radius: 2px; "><a href="#order.html" style="color: red;">ORDER</a></li>
+                <li><a href="testmonial.html">TESTMONIALS</a></li>
+                <li><a href="contact.html">CONTACT US</a></li>
+            </ul>
+            <button class="login-btn" onclick="openLogin()"><i class='bx bx-user'></i></button>
+        </nav>
+    </header>
+    <marquee behavior="sc" direction="">
+        <h1></h1>
+    </marquee>
+    <div id="loginPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeLogin()">&times;</span>
+            <h2>Login / Signup</h2>
+            <input type="tel" placeholder="Enter Phone Number">
+            <input type="password" placeholder="Enter Password">
+            <button class="btn">Login</button>
+            <p>New user? <a href="#">Sign up here</a></p>
+        </div>
+    </div>
+    <div style="display: flex; background-color: #2e2d2d;justify-content: space-between;">
+   <h2 style="color:orange;">🛍️ Your Order List</h2>
+<input type="text" id="searchBox" placeholder="Search in your cart..." 
+       style="padding:6px;margin-top: 15px; width:90%; max-width:200px; border-radius:5px; border:1px solid #ccc;"
+       onkeyup="renderOrders()">
+</div>
+<div id="orderList"></div>
+<div style="background-color: #3a3a39; height: 70px;display: flex;justify-content: center;">
+<h3 id="totalAmount" style="margin-top:5px; padding-top: 15px; color:rgb(243, 7, 7); font-size:30px;"></h3>
+</div>
+<div style="margin-top:20px;display: flex;justify-content: center;padding-bottom: 100px;" >
+  <button onclick="clearOrder()" 
+          style="background-color: #2e2d2d; color:rgb(225, 6, 6); padding:8px 15px; border:none; border-radius:5px; cursor:pointer; font-weight:bold;">
+    Clear All ❌
+  </button>
+
+  <button onclick="openCheckout()" 
+          style="margin-left:10px; background:linear-gradient(45deg, #28a745, #66bb6a); color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+    Proceed to Checkout ✅
+  </button>
+</div>
+
+<!-- Checkout Popup -->
+<div id="checkoutPopup" class="popup">
+  <div class="popup-card">
+    <span class="close-btn" onclick="closeCheckout()">&times;</span>
+    <h2 style="color:#007bff;">💳 Payment</h2>
+    <label style="font-weight:bold;">Choose Payment Method:</label><br>
+    <select id="paymentMethod" style="margin:10px; padding:6px; border-radius:5px; border:1px solid #aaa;">
+      <option value="card">Credit/Debit Card</option>
+      <option value="upi">UPI</option>
+      <option value="cod">Cash on Delivery</option>
+    </select><br>
+
+    <input type="text" id="paymentInfo" placeholder="Enter details" 
+           style="width:90%; padding:8px; margin-bottom:12px; border-radius:5px; border:1px solid #ccc;"><br>
+     <h4 style="margin: 5px;">Total Payable Amount:<h3 id="payable" style="color: red;margin: 2px;"><sub style="font-style: italic;color: #d32f2f;">only</sub></h3></h4>
+    <button onclick="processPayment()" 
+            style="background:linear-gradient(45deg, #007bff, #00c6ff); color:white; padding:10px 20px; border:none; border-radius:8px; cursor:pointer; font-weight:bold; box-shadow:0 4px 6px rgba(0,0,0,0.2);">
+      Pay Now 💵
+    </button>
+  </div>
+</div>
+
+<!-- Success Popup -->
+<div id="successPopup" class="popup">
+  <div class="popup-card" style="background:linear-gradient(135deg,#e8f5e9,#c8e6c9);">
+    <h2 style="color:green;">✅ Payment Successful!</h2>
+    <p style="font-size:16px; color:#333;">Your order is being prepared.</p>
+    <h3 id="countdown" style="color:#d32f2f; font-size:20px; font-weight:bold;">Order ready in 5:00 ⏳</h3>
+  </div>
+</div>
+
+<style>
+/* Reusable popup overlay */
+.popup {
+  display: none;
+  position: fixed;
+transform: translate(-50%, -50%);
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Card style inside popup */
+.popup-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  position: relative;
+  animation: zoomIn 0.3s ease;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 8px; right: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: red;
+}
+
+/* Popup animation */
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+</style>
+
+<script>
+function renderOrders() {
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    let list = document.getElementById("orderList");
+    let total = 0;
+    let search = document.getElementById("searchBox").value.toLowerCase();
+    list.innerHTML = "";
+
+    if (orders.length === 0) {
+        list.innerHTML = "<p style='color:gray;'>No items in order</p>";
+        document.getElementById("totalAmount").textContent = "";
+        return;
+    }
+
+    orders.forEach((item, index) => {
+        if (item.name.toLowerCase().includes(search)) {
+            total += item.price * item.qty;
+
+            let highlightedName = item.name.replace(
+                new RegExp(search, "gi"),
+                (match) => `<span style="background:yellow; color:black;">${match}</span>`
+            );
+
+            let div = document.createElement("div");
+            div.style.display = "flex";
+            div.style.alignItems = "center";
+            div.style.justifyContent = "space-between";
+            div.style.border = "1px solid #ddd";
+            div.style.padding = "10px";
+            div.style.margin = "8px 0";
+            div.style.background = "#fef6e4";
+            div.style.borderRadius = "8px";
+            div.innerHTML = `
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <img src="${item.image}" alt="${item.name}" width="60" height="60" style="border-radius:8px;">
+                    <span style="font-weight:bold; font-size:16px; color:#333;">${highlightedName}</span>
+                </div>
+                <div>
+                    <span style="color:blue; font-size:16px; font-weight:bold;">₹${item.price}</span>
+                    <input type="number" min="1" value="${item.qty}" onchange="updateQty(${index}, this.value)" 
+                           style="width:50px; margin-left:10px; text-align:center; border-radius:5px">
+                    <button onclick="removeItem(${index})" 
+                            style="margin-left:10px; background-color:#fef6e4;color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">
+                        ❌
+                    </button>
+                </div>
+            `;
+
+            list.appendChild(div);
+        }
+    });
+    document.getElementById("totalAmount").textContent = "Total Amount: ₹" + total;
+    document.getElementById("payable").textContent = ": ₹"+total+" only..";
+}
+
+function updateQty(index, newQty) {
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders[index].qty = parseInt(newQty);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    renderOrders();
+}
+
+function removeItem(index) {
+    let orders = JSON.parse(localStorage.getItem("orders")) || [];
+    orders.splice(index, 1);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    renderOrders();
+}
+
+function clearOrder() {
+    localStorage.removeItem("orders");
+    renderOrders();
+    alert("All items cleared ❌");
+}
+
+// Checkout system
+function openCheckout() {
+    document.getElementById("checkoutPopup").style.display = "flex";
+}
+function closeCheckout() {
+    document.getElementById("checkoutPopup").style.display = "none";
+}
+
+function processPayment() {
+    document.getElementById("checkoutPopup").style.display = "none";
+    document.getElementById("successPopup").style.display = "flex";
+    startCountdown();
+}
+
+function startCountdown() {
+    let timeLeft = 5 * 60;
+    let countdownEl = document.getElementById("countdown");
+
+    let timer = setInterval(() => {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        countdownEl.textContent = `Order ready in ${minutes}:${seconds < 10 ? '0' : ''}${seconds} ⏳`;
+        timeLeft--;
+
+        if (timeLeft < 0) {
+            clearInterval(timer);
+            countdownEl.textContent = "✅ Your order is ready! Enjoy your chai ☕";
+        }
+    }, 1000);
+}
+
+window.onload = renderOrders;
+</script>
+     </div>
+        <div id="footer" class="footer">
+         <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="#order"  style="background-color: aliceblue;color: brown;padding: 10px;">ORDER</a></li>
+            <li><a href="testmonial.html">TESTMONIALS</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+        </ul>
+    </div> 
+        <div id="ggg" class="footer">
+         <ul >
+            <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="menu.html"><i class="fa-solid fa-bars"></i></a></li>
+            <li ><a href="#order"  style="background-color: aliceblue;color: brown;padding: 10px;"><i class="fa-brands fa-shopify"></i></a></li>
+            <li><a href="testmonial.html"><i class="fa-brands fa-twitch"></i></a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-comment"></i></a></li>
+        </ul>
+     <div> 
+</body>
+</html>
