@@ -30,7 +30,8 @@ Functionality: Cart management, dummy payment, dynamic timer
 
 📸 Screenshots
 
-Add screenshots here (Home page, Menu, Cart, Checkout, Timer, etc.)
+Add screenshots here (<img width="886" height="870" alt="chai" src="https://github.com/user-attachments/assets/e61f4d05-87ee-49f7-b6ee-5c0ca43ff1fd" />
+, Menu, Cart, Checkout, Timer, etc.)
 
 Example:
 ![Home Page](screenshots/home.png)
