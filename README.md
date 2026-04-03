@@ -3,32 +3,22 @@ online cafe Ordering Website (Fun it it's a Chai theme😄)
 
 An interactive web-based restaurant ordering system that allows users to browse the menu,
 add items to the cart, proceed with dummy payment, and track order preparation with a countdown timer.
+```
+# Features
 
-#🚀 Features
-
-🏠 Home Page – Attractive landing page introducing the restaurant
-
-📋 Menu Page – Digital menu with food items, prices & add-to-cart option
-
-🛒 Cart System – Add/remove/update items dynamically with total cost calculation
-
-💳 Checkout & Dummy Payment – Simulated payment flow for placing orders
-
-⏳ Order Countdown Timer – Displays preparation time until the order is ready
-
-⭐ Testimonials – Customer reviews & feedback section
-
-📞 Contact Page – Simple contact form for customer queries
-
-🛠️ Tech Stack
-
+- Home Page – Attractive landing page introducing the restaurant
+- Menu Page – Digital menu with food items, prices & add-to-cart option
+- Cart System – Add/remove/update items dynamically with total cost calculation
+- Checkout & Dummy Payment – Simulated payment flow for placing orders
+- Order Countdown Timer – Displays preparation time until the order is ready
+- Testimonials – Customer reviews & feedback section
+- Contact Page – Simple contact form for customer queries
+- Tech Stack
 Frontend: HTML, CSS, JavaScript
-
 Design: Responsive layout, modern UI styling
-
-Functionality: Cart management, dummy payment, dynamic timer
-
-📸 Screenshots
+Functionality: Cart management, dummy payment, dynamic 
+```
+  ## Screenshots
 
 Add screenshots here (<img width="693" height="850" alt="Screenshot 2025-09-06 140731" src="https://github.com/user-attachments/assets/ce121464-873e-4f5a-a7e5-20b88ed2be45" />
 ,<img width="886" height="870" alt="chai" src="https://github.com/user-attachments/assets/e61f4d05-87ee-49f7-b6ee-5c0ca43ff1fd" />
@@ -42,7 +32,7 @@ Add screenshots here (<img width="693" height="850" alt="Screenshot 2025-09-06 1
 Example:
 ![Home Page]()
 ![Cart Page](screenshots/cart.png)
-
+```
 📂 Project Structure
 📦 dineease
  ┣ 📂 assets        # Images, icons, CSS, JS
@@ -53,22 +43,23 @@ Example:
  ┣ 📜 contact.html  # Contact page
  ┗ 📜 style.css     # Styling
  ┣ 📜 Script.js  # Logically handling ,local storage,dynamically adding sum total
-
-⚡ How to Run
+---
+```
+## How to Run
 
 Clone the repository:
 
-git clone https://github.com/your-username/dineease.git
+git clone https://github.com/ganeshnaik399/dineease.git
 
 
 Open index.html in a browser.
 
-🌐 Live Demo
+## Live Demo
 
-👉 Click here to view project
+# Click here to view project
  (Deploy on Netlify, Vercel, or GitHub Pages)
 
-✨ Future Enhancements
+## Future Enhancements
 
 Add backend (Node.js / Java + DB) to store orders
 
@@ -78,7 +69,7 @@ Real payment gateway integration (Razorpay/Stripe)
 
 Admin dashboard to manage orders
 
-👨‍💻 Author
+# Author
 
 Ganesh Naik (Ganni)
 
